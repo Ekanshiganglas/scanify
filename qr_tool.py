@@ -1,6 +1,10 @@
 import sys
 import cv2
 import qrcode
+
+
+# ── Generate ───────────────────────────────────────────────────────────────────
+
 def generate_qr():
     print("\n--- Generate QR Code ---")
     data     = input("Enter text or URL: ").strip()
@@ -13,7 +17,9 @@ def generate_qr():
     img.save(filename)
 
     print(f"\n  QR code saved as '{filename}'")
-# ── Scan ──
+
+
+# ── Scan ───────────────────────────────────────────────────────────────────────
 
 def scan_qr():
     print("\n--- Scan QR Code ---")
@@ -45,12 +51,12 @@ def scan_qr():
     print("-" * 40)
 
 
-# ── Menu ───
+# ── Menu ───────────────────────────────────────────────────────────────────────
 
 def menu():
     while True:
         print("\n" + "=" * 40)
-        print("        QR Code Tool")
+        print("        Scanify - QR Code Tool")
         print("=" * 40)
         print("  1. Generate QR code")
         print("  2. Scan QR code")
@@ -70,6 +76,7 @@ def menu():
             print("  Invalid choice. Please enter 1, 2, or 3.")
 
 
-# ── Entry point ───
+# ── Entry point ────────────────────────────────────────────────────────────────
+
 if __name__ == "__main__":
     menu()
